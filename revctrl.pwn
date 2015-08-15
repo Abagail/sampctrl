@@ -36,6 +36,10 @@ public OnRevCTRLHTTPResponse(index, response_code, data[]) {
 	if (response_code != 200) {
 		return ShowPlayerDialog(index, DIALOG_CHANGES, DIALOG_STYLE_MSGBOX, "{C0C0C0}" #USER_PROJECT "{FFFFFF} - RevCTRL", "{FFFFFF}An error has occurred, try again later.", "Okay", "");
 	}
+	if(!strlen(data))
+	{
+		ShowPlayerDialog(playerid, DIALOG_CHANGES, DIALOG_STYLE_MSGBOX, "{C0C0C0}" #USER_PROJECT "{FFFFFF"} - RevCTRL", "No updates to display!", "Okay", "");
+	}
 	return ShowPlayerDialog(index, DIALOG_CHANGES, DIALOG_STYLE_MSGBOX, "{C0C0C0}" #USER_PROJECT "{FFFFFF} - RevCTRL", data, "Okay", "");
 }
 
